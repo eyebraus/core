@@ -1,7 +1,6 @@
 # syntax=docker/dockerfile:labs
 
 # Arrange arguments
-ARG projects
 ARG target=development
 ARG workspaceDir=/workspace
 
@@ -25,17 +24,16 @@ RUN chmod -R a+x scripts/container/stage.mts
 RUN chmod -R a+x scripts/container/test.mts
 
 # Copy other files needed for subsequent targets
-COPY eslint.config.ts tsconfig.json ./
-COPY --parents packages/* ./
+COPY babel.config.cts eslint.config.ts jest.config.json tsconfig.json ./
+COPY --parents src/* ./
 
 # ================
 # build
 # ================
 FROM stage AS build
-ARG projects
 
 # Build!
-RUN node --loader ts-node/esm ./scripts/container/build.mts --project ${projects}
+RUN node --loader ts-node/esm ./scripts/container/build.mts
 
 ENTRYPOINT [ "/bin/sh", "-c" ]
 
@@ -43,9 +41,8 @@ ENTRYPOINT [ "/bin/sh", "-c" ]
 # test
 # ================
 FROM build AS test
-ARG projects
 
 # Test!
-RUN node --loader ts-node/esm ./scripts/container/test.mts --project ${projects}
+RUN node --loader ts-node/esm ./scripts/container/test.mts
 
 ENTRYPOINT [ "/bin/sh", "-c" ]
