@@ -1,14 +1,6 @@
-# Populating a new repo
+# `core`
 
-Once you start a new repository from this template, we recommend making the below updates to each of the mentioned files / directories.
+This package provides core abstractions used across my TypeScript projects.
 
-## All files
-* Replace all references to the `@eyebraus/foo` package name with the new preferred name.
-* Replace all references to the `packages/foo` subdirectory with whatever the subdirectory to the project will be.
-* Replace all references to the `eyebraus.foo` Docker namespace
-
-## `.gitignore`
-* Remove `package-lock.json`
-
-## `package.json`
-* Add `dependencies` and `devDependencies` as appropriate
+![Build status](https://github.com/eyebraus/core/actions/workflows/core-official.yaml/badge.svg)
+[![codecov](https://codecov.io/gh/eyebraus/core/graph/badge.svg?token=0NhTIxWe5C)](https://codecov.io/gh/eyebraus/core)
