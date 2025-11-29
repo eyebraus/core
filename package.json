@@ -1,6 +1,6 @@
 {
     "name": "@eyebraus/core",
-    "version": "1.0.0",
+    "version": "0.0.0-0001",
     "license": "MIT",
     "private": true,
     "main": "lib/index.js",
@@ -36,6 +36,9 @@
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.48.0",
         "yargs": "^18.0.0"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
     },
     "scripts": {
         "build": "npx tsc --build",
