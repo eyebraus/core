@@ -2,17 +2,13 @@
 *
 
 # Include necessary files from root
+!babel.config.cts
 !eslint.config.ts
+!jest.config.json
 !package-lock.json
 !package.json
+!src/*
 !tsconfig.json
-
-# Include all projects
-!packages/**/babel.config.cts
-!packages/**/jest.config.json
-!packages/**/package.json
-!packages/**/src/*
-!packages/**/tsconfig.json
 
 # Include scripts
 !scripts/common/*

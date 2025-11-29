@@ -23,13 +23,11 @@
         "noImplicitOverride": true,
         "noImplicitReturns": true,
         "noUnusedLocals": true,
-        "paths": {
-            "@eyebraus/*": ["packages/*/src/index.ts"]
-        },
+        "outDir": "lib",
         "pretty": true,
         "removeComments": true,
         "resolveJsonModule": true,
-        "rootDir": ".",
+        "rootDir": "src",
         "skipDefaultLibCheck": false,
         "skipLibCheck": true,
         "sourceMap": true,
@@ -41,5 +39,6 @@
         "useUnknownInCatchVariables": true,
         "verbatimModuleSyntax": false
     },
-    "exclude": ["eslint.config.ts", "node_modules"]
+    "exclude": ["eslint.config.ts", "node_modules", "**/*.spec.ts", "**/*.spec.tsx", "./lib/**/*", "./spec/**/*"],
+    "include": ["**/*.ts", "**/*.tsx"]
 }

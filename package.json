@@ -1,9 +1,11 @@
 {
-    "name": "@eyebraus",
-    "version": "0.0.0",
+    "name": "@eyebraus/core",
+    "version": "0.0.0-0001",
     "license": "MIT",
     "private": true,
+    "main": "lib/index.js",
     "type": "commonjs",
+    "types": "lib/index.d.ts",
     "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.28.5",
@@ -29,10 +31,21 @@
         "jest-junit": "^16.0.0",
         "jiti": "^2.6.1",
         "prettier": "^3.7.1",
+        "tslib": "^2.8.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.48.0",
         "yargs": "^18.0.0"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "scripts": {
+        "build": "npx tsc --build",
+        "clean": "./scripts/host/clean.mts",
+        "container-build": "./scripts/host/build.mts",
+        "container-test": "./scripts/host/test.mts",
+        "test": "npx jest --coverage"
     },
     "workspaces": [
         "packages/*"

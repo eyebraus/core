@@ -5,20 +5,14 @@ import { fileURLToPath } from 'node:url';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-import { Project } from '../common/project.mjs';
 import { run } from '../common/run.mjs';
 
 const fileDirectory = dirname(fileURLToPath(import.meta.url));
 
-const {
-    container,
-    project: projects,
-    tag: tags,
-} = yargs(hideBin(process.argv))
+const { container, tag: tags } = yargs(hideBin(process.argv))
     .options({
-        container: { alias: 'c', default: 'eyebraus.foo.test', type: 'string' },
-        project: { alias: 'p', choices: Object.keys(Project), default: Object.keys(Project), type: 'array' },
-        tag: { alias: 't', default: ['eyebraus.foo:local'], type: 'array' },
+        container: { alias: 'c', default: 'eyebraus.core.test', type: 'string' },
+        tag: { alias: 't', default: ['eyebraus.core:local'], type: 'array' },
     })
     .parseSync();
 
@@ -28,8 +22,6 @@ const dockerfile = resolve(fileDirectory, '../../dockerfile');
 const buildExitCode = await run('docker', [
     'build',
     dockerContextDirectory,
-    '--build-arg',
-    `projects=${projects.join(' ')}`,
     '--file',
     dockerfile,
     ...tags.flatMap((tag) => ['--tag', `${tag}`]),
