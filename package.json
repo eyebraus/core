@@ -2,7 +2,6 @@
     "name": "@eyebraus/core",
     "version": "0.0.0-0001",
     "license": "MIT",
-    "private": true,
     "main": "lib/index.js",
     "type": "commonjs",
     "types": "lib/index.d.ts",
