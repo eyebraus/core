@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Inclusions for all projects
+!**/src/*
+
+# Inclusions for TypeScript projects
+!**/babel.config.cts
+!**/jest.config.json
+!**/package.json
+!**/tsconfig.json

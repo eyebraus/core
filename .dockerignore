@@ -1,0 +1,19 @@
+# Ignore everything by default
+*
+
+# Include necessary files from root
+!eslint.config.ts
+!package-lock.json
+!package.json
+!tsconfig.json
+
+# Include all projects
+!packages/**/babel.config.cts
+!packages/**/jest.config.json
+!packages/**/package.json
+!packages/**/src/*
+!packages/**/tsconfig.json
+
+# Include scripts
+!scripts/common/*
+!scripts/container/*

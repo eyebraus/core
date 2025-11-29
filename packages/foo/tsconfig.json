@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "lib",
+        "rootDir": "src",
+        "types": ["jest", "node"]
+    },
+    "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "./lib/**/*", "./spec/**/*"],
+    "extends": "../../tsconfig.json",
+    "include": ["**/*.ts", "**/*.tsx"],
+    "references": []
+}

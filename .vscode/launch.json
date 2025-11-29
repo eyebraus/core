@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/packages/foo",
+            "internalConsoleOptions": "neverOpen",
+            "name": "Debug @eyebraus/foo",
+            "request": "launch",
+            "runtimeArgs": [
+                "--inspect-brk",
+                "${workspaceRoot}/node_modules/.bin/jest",
+                "--runInBand",
+                "${workspaceRoot}/packages/foo"
+            ],
+            "type": "node"
+        }
+    ],
+    "version": "0.2.0",
+}
