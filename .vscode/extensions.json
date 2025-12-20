@@ -5,11 +5,7 @@
         "firsttris.vscode-jest-runner",
         "github.vscode-github-actions",
         "golang.go",
-        "jinxdash.prettier-rust",
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
-        "nrwl.angular-console",
         "redhat.vscode-yaml",
-        "rust-lang.rust-analyzer",
         "tamasfe.even-better-toml"
     ]
 }
