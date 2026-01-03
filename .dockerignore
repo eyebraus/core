@@ -9,6 +9,7 @@
 !package.json
 !src/*
 !tsconfig.json
+!tsconfig.base.json
 
 # Include scripts
 !scripts/common/*
