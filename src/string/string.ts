@@ -64,3 +64,11 @@ export const isUndefinedOrWhiteSpace = (value: string | undefined): value is '' 
  * @returns True if value is white space; false otherwise
  */
 export const isWhiteSpace = (value: string): value is '' => value.trim() === '';
+
+/**
+ * Pads a number with leading 0s to match a certain length.
+ * @param value Numeric value.
+ * @param length Minimum string length for the formatted number.
+ * @returns Number formatted as string with leading 0s if the number was fewer characters than specified.
+ */
+export const padZero = (value: number, length: number): string => String(value).padStart(length, '0');
